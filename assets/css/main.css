@@ -896,7 +896,7 @@ body .purple {
 }
 
 .projects > .project:nth-of-type(1) {
-  background: url(../img/project-loading-svg.png) no-repeat center center;
+  background: url(../img/project-launchpad.png) no-repeat center center;
   background-size: cover;
 }
 

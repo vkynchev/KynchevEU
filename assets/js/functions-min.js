@@ -189,7 +189,7 @@ $(document).scroll(function() {
         }
     }
     function o(t, e, o) {
-        if (f(e, o), 1 != k.accelerationMax) {
+        if (h(e, o), 1 != k.accelerationMax) {
             var a = Date.now(), n = a - A;
             if (n < k.accelerationDelta) {
                 var i = (1 + 50 / n) / 2;
@@ -206,10 +206,10 @@ $(document).scroll(function() {
         }), !L) {
             var l = t === document.body, r = function(a) {
                 for (var n = Date.now(), i = 0, c = 0, s = 0; s < B.length; s++) {
-                    var u = B[s], p = n - u.start, d = p >= k.animationTime, h = d ? 1 : p / k.animationTime;
-                    k.pulseAlgorithm && (h = $(h));
-                    var f = u.x * h - u.lastX >> 0, y = u.y * h - u.lastY >> 0;
-                    i += f, c += y, u.lastX += f, u.lastY += y, d && (B.splice(s, 1), s--);
+                    var u = B[s], p = n - u.start, d = p >= k.animationTime, f = d ? 1 : p / k.animationTime;
+                    k.pulseAlgorithm && (f = $(f));
+                    var h = u.x * f - u.lastX >> 0, y = u.y * f - u.lastY >> 0;
+                    i += h, c += y, u.lastX += h, u.lastY += y, d && (B.splice(s, 1), s--);
                 }
                 l ? window.scrollBy(i, c) : (i && (t.scrollLeft += i), c && (t.scrollTop += c)), 
                 e || o || (B = []), B.length ? O(r, t, 1e3 / k.frameRate + 1) : L = !1;
@@ -221,7 +221,7 @@ $(document).scroll(function() {
         Y || e();
         var a = t.target, n = c(a);
         if (!n || t.defaultPrevented || t.ctrlKey) return !0;
-        if (h(x, "embed") || h(a, "embed") && /\.pdf/i.test(a.src) || h(x, "object")) return !0;
+        if (f(x, "embed") || f(a, "embed") && /\.pdf/i.test(a.src) || f(x, "object")) return !0;
         var i = -t.wheelDeltaX || t.deltaX || 0, r = -t.wheelDeltaY || t.deltaY || 0;
         return E && (t.wheelDeltaX && m(t.wheelDeltaX, 120) && (i = -120 * (t.wheelDeltaX / Math.abs(t.wheelDeltaX))), 
         t.wheelDeltaY && m(t.wheelDeltaY, 120) && (r = -120 * (t.wheelDeltaY / Math.abs(t.wheelDeltaY)))), 
@@ -232,8 +232,8 @@ $(document).scroll(function() {
         var e = t.target, a = t.ctrlKey || t.altKey || t.metaKey || t.shiftKey && t.keyCode !== z.spacebar;
         document.contains(x) || (x = document.activeElement);
         var n = /^(textarea|select|embed|object)$/i, i = /^(button|submit|radio|checkbox|file|color|image)$/i;
-        if (n.test(e.nodeName) || h(e, "input") && !i.test(e.type) || h(x, "video") || w(t) || e.isContentEditable || t.defaultPrevented || a) return !0;
-        if ((h(e, "button") || h(e, "input") && i.test(e.type)) && t.keyCode === z.spacebar) return !0;
+        if (n.test(e.nodeName) || f(e, "input") && !i.test(e.type) || f(x, "video") || w(t) || e.isContentEditable || t.defaultPrevented || a) return !0;
+        if ((f(e, "button") || f(e, "input") && i.test(e.type)) && t.keyCode === z.spacebar) return !0;
         var r, s = 0, u = 0, p = c(x), d = p.clientHeight;
         switch (p == document.body && (d = window.innerHeight), t.keyCode) {
           case z.up:
@@ -261,8 +261,8 @@ $(document).scroll(function() {
             break;
 
           case z.end:
-            var f = p.scrollHeight - p.scrollTop - d;
-            u = f > 0 ? f + 10 : 0;
+            var h = p.scrollHeight - p.scrollTop - d;
+            u = h > 0 ? h + 10 : 0;
             break;
 
           case z.left:
@@ -315,10 +315,10 @@ $(document).scroll(function() {
     function d(t, e) {
         window.addEventListener(t, e, !1);
     }
-    function h(t, e) {
+    function f(t, e) {
         return (t.nodeName || "").toLowerCase() === e.toLowerCase();
     }
-    function f(t, e) {
+    function h(t, e) {
         t = t > 0 ? 1 : -1, e = e > 0 ? 1 : -1, (j.x !== t || j.y !== e) && (j.x = t, j.y = e, 
         B = [], A = 0);
     }
