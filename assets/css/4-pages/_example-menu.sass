@@ -1,0 +1,90 @@
+.page-home
+  
+  .nav
+    
+    
+    .menu
+      padding: 0
+      margin: 0
+      list-style-type: none
+      display: flex
+      flex-direction: row
+      align-items: stretch
+      li
+        a:link
+          color: #666
+        a:visited
+          color: #666
+      
+      @media screen and (max-width: 650px)
+        flex-direction: column
+        li
+          padding: 10px 30px 10px 30px
+          &:active
+            background-color: rgba(0,0,0,0.1)
+      
+      li
+        flex-grow: 1
+        padding: 20px 30px 20px 30px
+        transition: 0.4s
+        font-size: 16px
+        @media screen and (max-width: 800px)
+          &:nth-child(1)
+            &:active, a:active
+              a
+                color: #2c3e50
+              color: #2c3e50
+          &:nth-child(2)
+            &:active, a:active
+              a
+                color: #2980b9
+              color: #2980b9
+          &:nth-child(3)
+            &:active, a:active
+              a
+                color: #d35400
+              color: #d35400
+          &:nth-child(4)
+            &:active, a:active
+              a
+                color: #27ae60
+              color: #27ae60
+          &:nth-child(5)
+            &:active, a:active
+              a
+                color: #8e44ad
+              color: #8e44ad
+          
+          &:active
+            background-color: rgba(0,0,0,0.1)
+        @media screen and (min-width: 800px)
+          &:nth-child(1)
+            &:hover, a:hover
+              a
+                color: #2c3e50
+              color: #2c3e50
+          &:nth-child(2)
+            &:hover, a:hover
+              a
+                color: #2980b9
+              color: #2980b9
+          &:nth-child(3)
+            &:hover, a:hover
+              a
+                color: #d35400
+              color: #d35400
+          &:nth-child(4)
+            &:hover, a:hover
+              a
+                color: #27ae60
+              color: #27ae60
+          &:nth-child(5)
+            &:hover, a:hover
+              a
+                color: #8e44ad
+              color: #8e44ad
+          
+          &:hover
+            background-color: rgba(0,0,0,0.1)
+        a
+          padding: 20px 20px 20px 20px

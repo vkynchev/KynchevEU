@@ -1,0 +1,93 @@
+.page-home
+  
+  .portfolio
+    h2
+      color: #2980b9
+    h4
+      color: #2980b9
+    
+    .info
+      display: flex
+      flex-direction: row
+      @media screen and (max-width: 800px)
+        flex-direction: column
+        .img-logo
+          width: 200px
+          margin-left: calc(50vw - 170px)
+          
+
+      .img-logo
+        overflow: hidden
+        height: 220px
+        flex: 0 0 220px
+        img
+          margin-top: -30%
+      
+      .about-text
+        font-size: 16px
+        text-align: justify
+        
+    .skills
+      
+      .skills-text
+        font-size: 16px
+        text-align: justify
+        
+      span
+        display: block
+        font-weight: bold
+        margin: -20px 0 0 0
+        
+      .design-skills-lockup
+        display: flex
+        flex-direction: row
+        justify-content: center
+        @media screen and (max-width: 550px)
+          flex-direction: column
+          .photo, .illustrator
+            margin-left: calc(50vw - 175px) !important
+        
+        
+        .photo
+          width: 237px
+          height: 230px
+          margin: -40px 20px -20px 20px
+          transform: scale(0.5)
+          font-size: 32px
+          background: url(/assets/img/ps-il.jpg) -5px -5px
+          span
+            margin: -50px 0 0 0
+        .illustrator
+          width: 237px
+          height: 230px
+          margin: -40px 20px -20px -100px
+          transform: scale(0.5)
+          font-size: 32px
+          background: url(/assets/img/ps-il.jpg) -258px -5px
+          span
+            margin: -50px 0 0 0
+      
+      .front-skills-lockup
+        display: flex
+        flex-direction: row
+        justify-content: center
+        @media screen and (max-width: 440px)
+          flex-direction: column
+          .html, .css, .javascript
+            margin-left: calc(50vw - 97px) !important
+        
+        .html
+          width: 67px
+          height: 73px
+          margin: 20px
+          background: url(/assets/img/icon-html-css-anjular-js-ajax.png) 0 -17px
+        .css
+          width: 67px
+          height: 73px
+          margin: 20px
+          background: url(/assets/img/icon-html-css-anjular-js-ajax.png) -67px -17px
+        .javascript
+          width: 67px
+          height: 73px
+          margin: 20px
+          background: url(/assets/img/icon-html-css-anjular-js-ajax.png) -136px -17px

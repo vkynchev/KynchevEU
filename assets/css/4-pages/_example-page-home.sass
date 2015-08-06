@@ -1,0 +1,63 @@
+::-webkit-scrollbar
+  display: none
+
+body
+  margin: 10px
+  background-color: $silver
+  overflow-x: hidden
+  
+  .blue
+    color: #2980b9
+  .orange
+    color: #d35400
+  .green
+    color: #27ae60
+  .purple
+    color: #8e44ad
+
+.page-home
+  text-align: center
+  .homepage
+    background:
+      image: url(../img/tools.png)
+      position: center
+  
+  .artop
+    background-color: $silver
+    height: 50px
+    width: 50px
+    position: fixed
+    bottom: 20px
+    right: 20px
+    padding: 10px
+    transition: 0.4s
+    z-index: 20
+    
+    h5
+      margin-top: -20px
+      font-weight: bold
+    
+    &:hover
+      bottom: 35px
+
+  section
+    max-width: 800px
+    margin: 50px auto
+    padding: 40px
+    position: relative
+    background-color: rgba(255,255,255,0.7)
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1)
+
+    h1
+      font-weight: 700
+      line-height: 1
+      margin: 20px 0
+      letter-spacing: 1px
+      @media screen and (max-width: 380px)
+        font-size: 50px
+        
+    p
+      font-size: 16px
+		
+    .button
+      transition: 0.1s
